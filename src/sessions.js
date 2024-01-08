@@ -187,7 +187,7 @@ const initializeEvents = (client, sessionId) => {
   checkIfEventisEnabled('disconnected')
     .then(_ => {
       client.on('disconnected', (reason) => {
-        triggerWebhook(sessionWebhook, sessionId, 'disconnected', { reason })
+        triggerWebhook(sessionWebhook, sessionId, 'disconnected', { reason, mensagem: 'SESSÃO DO WHATSAPP DESCONECTADA' })
       })
     })
 
